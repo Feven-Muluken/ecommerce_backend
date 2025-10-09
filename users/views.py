@@ -5,9 +5,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializer import RegisterSerializer, LoginSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
-# Create your views here.
-# POST /auth/register:'sabe'
-# POST /auth/login:'lkjkj'
+
+
 def index(request):
   return HttpResponse("Hello world welcome to ecomerce website")
 
@@ -31,7 +30,7 @@ class LoginView(APIView):
       }, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
 
-   # for regiter testing purpose
+   # for register testing purpose
 # {
 #   "username": "feven123",
 #   "email": "feven@example.com",
